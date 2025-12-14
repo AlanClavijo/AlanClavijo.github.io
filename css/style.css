@@ -97,14 +97,8 @@ a:hover {
   border-bottom: 1px solid #222;
 }
 
-.perfil-img {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-  border: 2px solid #333;
-}
+/* NOTA: .perfil-img ha sido reemplazado por la animación .flip-card más abajo,
+   pero mantenemos estilos genéricos si los hubiera. */
 
 .ubicacion {
   font-size: 0.9rem;
@@ -489,8 +483,66 @@ footer {
   .cargo-h1 {
     font-size: 1rem;
   }
-  .perfil-img {
-    width: 110px;
-    height: 110px;
-  }
+  /* Ajustes para la animación en móvil si fuera necesario */
+}
+
+/* =========================================
+   ANIMACIÓN FLIP CARD (MONEDA 3D)
+   ========================================= */
+
+/* Contenedor principal de la "moneda" */
+.flip-card {
+  background-color: transparent;
+  width: 140px; /* Tamaño de la foto */
+  height: 140px;
+  perspective: 1000px; /* Profundidad 3D */
+  margin: 0 auto 1rem auto; /* Centrado */
+}
+
+/* El contenedor interno que gira */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Efecto rebote suave */
+  transform-style: preserve-3d;
+}
+
+/* Acción de giro al pasar el mouse */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Estilos comunes para ambas caras */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  -webkit-backface-visibility: hidden; /* Safari */
+  backface-visibility: hidden;
+  border-radius: 50%; /* Forma circular */
+  overflow: hidden;
+  border: 3px solid #333; /* Borde del círculo */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+}
+
+/* Cara FRONTAL (Foto Formal) */
+.flip-card-front {
+  background-color: #111;
+}
+
+/* Cara TRASERA (Foto Casual) */
+.flip-card-back {
+  background-color: #111;
+  transform: rotateY(180deg);
+}
+
+/* Asegurar que las imágenes llenen el círculo */
+.flip-card-front img,
+.flip-card-back img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }

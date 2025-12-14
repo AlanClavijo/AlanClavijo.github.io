@@ -1,6 +1,8 @@
-/* Cuerpo General */
+/* =========================================
+   ESTILOS GENERALES Y RESET
+   ========================================= */
 body {
-  font-family: "Segoe UI", sans-serif;
+  font-family: "Segoe UI", system-ui, sans-serif;
   background-color: #0d0d0d;
   color: #f5f5f5;
   margin: 0;
@@ -17,110 +19,319 @@ h3 {
 a {
   color: #4e8cff;
   text-decoration: none;
+  transition: color 0.3s ease;
 }
 
 a:hover {
   text-decoration: underline;
+  color: #6ea3ff;
 }
 
 .cargo-h1 {
-  display: block; /* Esto hace que el cargo baje a la siguiente línea */
-  font-size: 1.2rem; /* Lo hace más pequeño que el nombre */
-  color: #bbb; /* Le da un color más suave (gris) */
+  display: block;
+  font-size: 1.2rem;
+  color: #bbb;
   margin-top: 5px;
+  font-weight: 400;
 }
 
-/* Header */
+/* =========================================
+   NAVBAR MEJORADA (RESPONSIVE & UX)
+   ========================================= */
+.navbar {
+  position: sticky;
+  top: 0;
+  background-color: rgba(13, 13, 13, 0.98);
+  padding: 15px 0;
+  z-index: 1000;
+  border-bottom: 1px solid #222;
+  backdrop-filter: blur(10px);
+}
 
+.nav-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center; /* Centrado en Desktop */
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.menu-toggle {
+  display: none; /* Oculto en PC */
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  padding: 0.5rem;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 500;
+  padding: 5px 10px;
+  border-radius: 6px;
+  transition: all 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #4e8cff;
+  background: rgba(78, 140, 255, 0.1);
+  text-decoration: none;
+}
+
+/* =========================================
+   HEADER / PERFIL
+   ========================================= */
 .perfil {
   text-align: center;
-  padding: 2rem;
+  padding: 3rem 2rem;
   background: #111;
   border-bottom: 1px solid #222;
 }
 
-/* foto de perfil */
 .perfil-img {
   width: 120px;
   height: 120px;
   border-radius: 50%;
   margin-bottom: 1rem;
-}
-
-/* texto */
-.subtitulo {
-  font-size: 1.2rem;
-  color: #bbb;
+  object-fit: cover;
+  border: 2px solid #333;
 }
 
 .ubicacion {
   font-size: 0.9rem;
   color: #888;
+  margin-top: 0.5rem;
+}
+
+.social-links {
+  margin-top: 1rem;
 }
 
 .social-links a {
   margin: 0 0.5rem;
   font-size: 0.9rem;
   background: #1a1a1a;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  border-radius: 50px;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid transparent;
 }
 
-/* Secciones */
+.social-links a:hover {
+  border-color: #4e8cff;
+  background: #222;
+  text-decoration: none;
+}
+
+/* =========================================
+   SECCIONES Y CARDS
+   ========================================= */
 section {
-  padding: 2rem;
+  padding: 3rem 2rem;
   border-bottom: 1px solid #222;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Tags de Tecnologías */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
 }
 
 .tags span {
   background: #1e1e2f;
   color: #fff;
-  padding: 6px 12px;
+  padding: 8px 16px;
   border-radius: 12px;
-  margin: 5px;
   display: inline-flex;
   align-items: center;
-  gap: 6px; /* espacio entre icono y texto */
-  font-size: 0.9rem;
-}
-
-.social-links a {
-  margin: 0 0.5rem;
+  gap: 8px;
   font-size: 0.95rem;
-  background: #1a1a1a;
-  padding: 0.5rem 1rem;
-  border-radius: 20px;
-  display: inline-flex;
-  align-items: center;
-  gap: 8px; /* separa el icono del texto */
+  border: 1px solid #333;
 }
 
-/* Experiencia y proyectos */
-.card,
-.proyecto {
+/* Tarjetas de Experiencia / Formación */
+.card {
   background: #1a1a1a;
-  padding: 1rem;
-  border-radius: 10px;
-  margin-bottom: 1rem;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid #333;
+  margin-bottom: 1.5rem;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
-.proyecto a {
-  display: inline-block;
-  margin-top: 0.5rem;
-  background: #4e8cff;
+.card:hover {
+  transform: translateY(-3px);
+  border-color: #4e8cff;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.card-header h3 {
+  margin: 0;
+  font-size: 1.15rem;
+  line-height: 1.4;
+}
+
+.años {
+  background-color: #4e8cff;
   color: #fff;
-  padding: 0.4rem 0.8rem;
-  border-radius: 5px;
+  padding: 4px 12px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
-.proyecto a:hover {
-  background: #356ac3;
+.card p {
+  margin: 0 0 10px 0;
+  color: #ccc;
+  font-size: 0.95rem;
 }
 
-/* Footer Profesional Renovado */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+/* =========================================
+   SECCIÓN DE PROYECTOS (GRID VISUAL)
+   ========================================= */
+.proyectos-grid {
+  display: grid;
+  /* Minmax 280px para que no se rompa en móviles pequeños */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+.proyecto-card {
+  background: #1a1a1a;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid #333;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.proyecto-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+  border-color: #4e8cff;
+}
+
+/* Banner General */
+.card-banner {
+  height: 180px;
+  width: 100%;
+  background: #222;
+  position: relative;
+}
+
+/* Estilo para imágenes que rellenan el banner (NexCore) */
+.card-logo {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Estilo para banner con ícono (GitHub) */
+.card-banner.con-icono {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-banner.con-icono i {
+  font-size: 5rem;
+  color: rgba(255, 255, 255, 0.9);
+  transition: transform 0.3s ease;
+}
+
+.proyecto-card:hover .card-banner.con-icono i {
+  transform: scale(1.1) rotate(-5deg);
+  color: #ffffff;
+}
+
+/* Contenido de la tarjeta */
+.card-content {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+
+.card-content h3 {
+  margin-top: 0;
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+}
+
+.tech-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 1rem 0;
+}
+
+.tech-tag {
+  background: rgba(78, 140, 255, 0.1);
+  color: #4e8cff;
+  font-size: 0.75rem;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  border: 1px solid rgba(78, 140, 255, 0.2);
+}
+
+.btn-proyecto {
+  margin-top: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  background-color: #4e8cff;
+  color: white !important;
+  padding: 0.8rem;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: background 0.3s;
+}
+
+.btn-proyecto:hover {
+  background-color: #356ac3;
+  text-decoration: none;
+}
+
+/* =========================================
+   FOOTER
+   ========================================= */
 footer {
-  background: #050505; /* Fondo casi negro para profundidad */
+  background: #050505;
   padding: 4rem 1rem 2rem;
   border-top: 1px solid #333;
   margin-top: 4rem;
@@ -133,69 +344,54 @@ footer {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 3rem;
-  text-align: center; /* Centrar todo para mejor equilibrio visual */
+  text-align: center;
 }
 
 .footer-section h3 {
-  color: #fff;
   font-size: 1.3rem;
   margin-bottom: 1.5rem;
   position: relative;
   display: inline-block;
 }
 
-/* Pequeña línea decorativa debajo de los títulos */
 .footer-section h3::after {
   content: "";
   display: block;
   width: 40px;
   height: 3px;
-  background: #4e8cff; /* Tu color azul de acento */
+  background: #4e8cff;
   margin: 8px auto 0;
   border-radius: 2px;
 }
 
-.footer-section p {
-  line-height: 1.6;
-  font-size: 0.95rem;
-  color: #aaa;
-}
-
-/* Enlaces de navegación */
 .footer-links {
   list-style: none;
   padding: 0;
 }
-
 .footer-links li {
   margin-bottom: 0.8rem;
 }
-
 .footer-links a {
   color: #bbb;
-  font-size: 1rem;
   transition: color 0.3s;
-  text-decoration: none;
 }
-
 .footer-links a:hover {
   color: #4e8cff;
 }
 
-/* Iconos Sociales Grandes y con Estilo */
 .social-icons {
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
   margin-top: 1rem;
 }
 
 .social-icons a {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: #fff;
-  background: #1f1f1f; /* Círculo gris de fondo */
-  width: 50px;
-  height: 50px;
+  background: #1f1f1f;
+  width: 45px;
+  height: 45px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -205,9 +401,8 @@ footer {
 }
 
 .social-icons a:hover {
-  background: #4e8cff; /* Se vuelve azul al pasar el mouse */
-  transform: translateY(-5px); /* Efecto de elevación */
-  box-shadow: 0 6px 15px rgba(78, 140, 255, 0.4);
+  background: #4e8cff;
+  transform: translateY(-5px);
 }
 
 .footer-bottom {
@@ -219,40 +414,7 @@ footer {
   color: #666;
 }
 
-/* Barra de navegación flotante */
-.navbar {
-  position: sticky;
-  top: 0;
-  background-color: rgba(13, 13, 13, 0.95); /* Semi-transparente */
-  padding: 15px 0;
-  z-index: 1000; /* Asegura que esté encima de todo */
-  border-bottom: 1px solid #222;
-  text-align: center;
-  backdrop-filter: blur(5px); /* Efecto borroso moderno */
-}
-
-.nav-links a {
-  color: #fff;
-  margin: 0 15px;
-  font-size: 0.95rem;
-  font-weight: 500;
-  transition: color 0.3s;
-  text-decoration: none;
-}
-
-.nav-links a:hover {
-  color: #4e8cff;
-}
-
-/* Ajuste para móviles */
-@media (max-width: 768px) {
-  .nav-links a {
-    display: inline-block;
-    margin: 5px;
-    font-size: 0.8rem;
-  }
-}
-
+/* Botón Volver Arriba */
 .btn-subir {
   position: fixed;
   bottom: 30px;
@@ -265,9 +427,9 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
   z-index: 999;
-  transition: transform 0.3s;
+  transition: transform 0.3s, background 0.3s;
 }
 
 .btn-subir:hover {
@@ -275,73 +437,60 @@ footer {
   background: #356ac3;
 }
 
-/* Sistema de Grillas */
-.grid-container {
-  display: grid;
-  grid-template-columns: repeat(
-    auto-fill,
-    minmax(300px, 1fr)
-  ); /* Auto-ajuste responsivo */
-  gap: 20px;
-}
+/* =========================================
+   MEDIA QUERIES (MÓVIL)
+   ========================================= */
+@media (max-width: 768px) {
+  /* Navegación Móvil */
+  .nav-container {
+    justify-content: flex-end;
+  }
 
-/* Tarjeta Mejorada */
-.card {
-  background: #1a1a1a;
-  padding: 1.5rem; /* Un poco más de espacio interno */
-  border-radius: 12px;
-  border: 1px solid #333; /* Borde sutil para definir mejor la tarjeta */
+  .menu-toggle {
+    display: block;
+    z-index: 1001;
+  }
 
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start; /* IMPORTANTE: Alinea todo arriba */
-  gap: 10px; /* Espacio constante entre título y texto */
+  .nav-links {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Oculto inicialmente */
+    width: 70%;
+    height: 100vh;
+    background: #111;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    transition: right 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+    box-shadow: -5px 0 15px rgba(0, 0, 0, 0.5);
+    border-left: 1px solid #333;
+  }
 
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
+  .nav-links.active {
+    right: 0;
+  }
 
-.card:hover {
-  transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  border-color: #4e8cff; /* Detalle de color al interactuar */
-}
+  .nav-links a {
+    font-size: 1.2rem;
+    padding: 1rem 2rem;
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #222;
+  }
 
-/* Ajuste del Header de la tarjeta */
-.card-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start; /* Alinea arriba por si el título es largo */
-  gap: 10px;
-}
-
-.card-header h3 {
-  margin: 0;
-  font-size: 1.1rem;
-  line-height: 1.4; /* Mejora lectura en títulos largos */
-  color: #fff;
-}
-
-.card p {
-  margin: 0;
-  color: #ccc; /* Color de texto ligeramente más suave */
-  font-size: 0.95rem;
-}
-
-/* Estilo para la etiqueta de Años */
-.años {
-  background-color: #4e8cff; /* Azul brillante */
-  color: #fff;
-  padding: 4px 10px;
-  border-radius: 12px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  white-space: nowrap; /* Evita que la fecha se parta en dos líneas */
-  display: inline-block;
-  align-self: flex-start; /* Alinea la etiqueta arriba si el título es largo */
-}
-
-/* Opcional: Cambio de color al pasar el mouse por la tarjeta */
-.card:hover .años {
-  background-color: #356ac3; /* Un azul un poco más oscuro */
-  transition: background-color 0.3s ease;
+  /* Ajustes Generales */
+  section {
+    padding: 3rem 1.5rem;
+  }
+  h1 {
+    font-size: 1.8rem;
+  }
+  .cargo-h1 {
+    font-size: 1rem;
+  }
+  .perfil-img {
+    width: 110px;
+    height: 110px;
+  }
 }

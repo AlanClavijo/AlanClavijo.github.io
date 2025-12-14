@@ -13,12 +13,10 @@
       name="description"
       content="Portafolio de Alan Diego Clavijo Lagos, estudiante de Ingeniería de Sistemas y Desarrollador Web en Santa Cruz. Especialista en HTML, CSS, JS, Python y Robótica."
     />
-
     <meta
       name="keywords"
       content="Alan Diego Clavijo, Desarrollador Web, Ingeniero de Sistemas, Santa Cruz, Bolivia, UPDS, Robótica, Programador, Freelancer, Frontend"
     />
-
     <meta name="author" content="Alan Diego Clavijo Lagos" />
     <meta name="robots" content="index, follow" />
 
@@ -31,7 +29,10 @@
       property="og:description"
       content="Ingeniero de Sistemas en formación y Auxiliar de Robótica. Mira mis proyectos y experiencia."
     />
-    <meta property="og:image" content="https://alanclavijo.github.io/img/perfil.jpg" />
+    <meta
+      property="og:image"
+      content="https://alanclavijo.github.io/img/perfil.jpg"
+    />
     <meta property="og:url" content="https://alanclavijo.github.io/" />
     <meta property="og:locale" content="es_BO" />
 
@@ -40,7 +41,6 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
-
     <link rel="icon" type="image/png" href="img/favicon.png" />
 
     <script type="application/ld+json">
@@ -69,20 +69,26 @@
 
   <body>
     <nav class="navbar">
-      <div class="nav-links">
-        <a href="#sobre-mi">Sobre mí</a>
-        <a href="#experiencia">Experiencia</a>
-        <a href="#proyectos">Proyectos</a>
-        <a href="#competencias">Competencias</a>
-        <a href="#reconocimientos">Logros</a>
-        <a href="#formacion-complementaria">Formación</a>
+      <div class="nav-container">
+        <button class="menu-toggle" aria-label="Abrir menú">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+
+        <div class="nav-links">
+          <a href="#sobre-mi" class="nav-link">Sobre mí</a>
+          <a href="#experiencia" class="nav-link">Experiencia</a>
+          <a href="#proyectos" class="nav-link">Proyectos</a>
+          <a href="#competencias" class="nav-link">Competencias</a>
+          <a href="#reconocimientos" class="nav-link">Logros</a>
+          <a href="#formacion-complementaria" class="nav-link">Formación</a>
+        </div>
       </div>
     </nav>
 
     <header class="perfil">
       <img
         src="img/perfil.jpg"
-        alt="Alan Diego Clavijo Lagos - Desarrollador Web e Ingeniero de Sistemas"
+        alt="Alan Diego Clavijo Lagos - Desarrollador Web"
         class="perfil-img"
         loading="lazy"
       />
@@ -100,21 +106,22 @@
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fa-solid fa-envelope"></i> alandiegocl@gmail.com</a
-        >
+          <i class="fa-solid fa-envelope"></i> alandiegocl@gmail.com
+        </a>
         <a
           href="https://github.com/AlanClavijo"
           target="_blank"
           rel="noopener noreferrer"
-          ><i class="fa-brands fa-github"></i> GitHub</a
         >
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
         <a
           href="https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/"
           target="_blank"
           rel="noopener noreferrer"
         >
-          <i class="fa-brands fa-linkedin"></i> LinkedIn</a
-        >
+          <i class="fa-brands fa-linkedin"></i> LinkedIn
+        </a>
       </nav>
     </header>
 
@@ -149,12 +156,13 @@
       <h2>FORMACIÓN ACADÉMICA</h2>
       <div class="card-header">
         <h3>Estudiante de Ingeniería de Sistemas (Licenciatura)</h3>
-        <span class="años"> Febrero 2023 – Actualidad</span>
+        <span class="años">Febrero 2023 – Actualidad</span>
       </div>
     </section>
 
     <section id="experiencia">
       <h2>Experiencia</h2>
+
       <div class="card">
         <div class="card-header">
           <h3>
@@ -205,22 +213,79 @@
         <p>Gestión de caja y atención directa al cliente.</p>
         <p>
           Coordinación de entregas a domicilio (delivery) mediante plataformas
-          de redes sociales (Facebook, Instagram, WhatsApp).
+          de redes sociales.
         </p>
       </div>
     </section>
 
     <section id="proyectos">
-      <h2>Proyectos</h2>
-      <div class="proyecto">
-        <h3>Proyecto 1</h3>
-        <p>Descripción breve del proyecto.</p>
-        <a href="#">🔗 Ver en GitHub</a>
-      </div>
-      <div class="proyecto">
-        <h3>Proyecto 2</h3>
-        <p>Otro proyecto destacado.</p>
-        <a href="#">🔗 Ver en GitHub</a>
+      <h2>Proyectos Destacados</h2>
+
+      <div class="proyectos-grid">
+        <article class="proyecto-card">
+          <div class="card-banner banner-nexcore">
+            <img
+              src="https://alanclavijo.github.io/NexCore/assets/img/logos/nexcore-logo.png"
+              alt="Logo NexCore Solutions"
+              class="card-logo"
+            />
+          </div>
+
+          <div class="card-content">
+            <h3>NexCore Solutions</h3>
+            <p>
+              Sitio web corporativo moderno para una empresa de BPO. Enfocado en
+              la presentación de servicios, captación de clientes y diseño
+              totalmente responsivo.
+            </p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">HTML5</span>
+              <span class="tech-tag">CSS3</span>
+              <span class="tech-tag">JavaScript</span>
+            </div>
+
+            <a
+              href="https://alanclavijo.github.io/NexCore/nosotros.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-proyecto"
+            >
+              <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver
+              Proyecto
+            </a>
+          </div>
+        </article>
+
+        <article class="proyecto-card">
+          <div class="card-banner con-icono" style="background: #24292e">
+            <i class="fa-brands fa-github"></i>
+          </div>
+
+          <div class="card-content">
+            <h3>Más Proyectos en GitHub</h3>
+            <p>
+              Explora mi código fuente, ejercicios de algoritmos en Python,
+              aplicaciones de consola en C# y proyectos de robótica.
+            </p>
+
+            <div class="tech-tags">
+              <span class="tech-tag">Python</span>
+              <span class="tech-tag">C#</span>
+              <span class="tech-tag">Arduino</span>
+            </div>
+
+            <a
+              href="https://github.com/AlanClavijo"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-proyecto"
+              style="background-color: #333"
+            >
+              <i class="fa-brands fa-github"></i> Ver Perfil
+            </a>
+          </div>
+        </article>
       </div>
     </section>
 
@@ -256,8 +321,7 @@
         </div>
         <p>
           Reconocimiento por la participación activa en la 25ª Feria
-          Internacional del Libro de Santa Cruz de la Sierra, demostrando
-          compromiso con la difusión cultural.
+          Internacional del Libro de Santa Cruz de la Sierra.
         </p>
       </div>
 
@@ -268,8 +332,7 @@
         </div>
         <p>
           Reconocimiento por la participación en la XXVI Feria Internacional del
-          Libro de Santa Cruz de la Sierra, evidenciando continuidad en el apoyo
-          a iniciativas culturales y educativas.
+          Libro de Santa Cruz de la Sierra.
         </p>
       </div>
 
@@ -280,8 +343,7 @@
         </div>
         <p>
           Participación destacada en la 2da Competencia Internacional de
-          Robótica TECHHOMEBOT, aplicando conocimientos avanzados en robótica y
-          tecnología.
+          Robótica TECHHOMEBOT.
         </p>
       </div>
 
@@ -292,8 +354,7 @@
         </div>
         <p>
           Reconocimiento por el valioso apoyo en la etapa departamental de la
-          12ª Olimpiada Científica Estudiantil Plurinacional Boliviana,
-          contribuyendo al desarrollo de la robótica educativa.
+          12ª Olimpiada Científica Estudiantil.
         </p>
       </div>
 
@@ -304,7 +365,7 @@
         </div>
         <p>
           Reconocimiento por impartir conocimientos y fomentar el interés en la
-          disciplina de robótica entre estudiantes.
+          disciplina de robótica.
         </p>
       </div>
     </section>
@@ -319,8 +380,8 @@
             <span class="años">2024</span>
           </div>
           <p>
-            Impartido por BIG School (Romuald Fons y Brais Moure). Formación
-            enfocada en fundamentos de IA y su aplicación en proyectos reales.
+            Impartido por BIG School. Fundamentos de IA y aplicación en
+            proyectos reales.
           </p>
         </div>
 
@@ -329,10 +390,7 @@
             <h3>Inteligencia Artificial y Productividad</h3>
             <span class="años">2024</span>
           </div>
-          <p>
-            Curso certificado por Google y Santander Open Academy sobre
-            herramientas de productividad con IA.
-          </p>
+          <p>Curso certificado por Google y Santander Open Academy.</p>
         </div>
 
         <div class="card">
@@ -341,8 +399,8 @@
             <span class="años">2024</span>
           </div>
           <p>
-            Certificación de LinkedIn Learning sobre los fundamentos y
-            aplicaciones éticas de la IA Generativa.
+            Certificación de LinkedIn Learning sobre fundamentos éticos de la IA
+            Generativa.
           </p>
         </div>
 
@@ -352,8 +410,7 @@
             <span class="años">2023</span>
           </div>
           <p>
-            Participación en congreso internacional sobre innovación tecnológica
-            y sistemas (12 horas curriculares).
+            Participación en congreso internacional (12 horas curriculares).
           </p>
         </div>
 
@@ -386,7 +443,7 @@
           </div>
           <p>
             Participación destacada en el 4to Modelo Interno de las Naciones
-            Unidas del Colegio Isabel Saavedra.
+            Unidas.
           </p>
         </div>
 
@@ -397,7 +454,7 @@
           </div>
           <p>
             Capacitación en habilidades blandas, comunicación efectiva y
-            liderazgo (IQ Max).
+            liderazgo.
           </p>
         </div>
       </div>
@@ -464,6 +521,35 @@
         </p>
       </div>
     </footer>
+
+    <script>
+      // Lógica para el menú hamburguesa móvil
+      const menuToggle = document.querySelector(".menu-toggle");
+      const navLinks = document.querySelector(".nav-links");
+      const links = document.querySelectorAll(".nav-link");
+
+      menuToggle.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        // Cambiar ícono de hamburguesa a X
+        const icon = menuToggle.querySelector("i");
+        if (navLinks.classList.contains("active")) {
+          icon.classList.remove("fa-bars");
+          icon.classList.add("fa-xmark");
+        } else {
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        }
+      });
+
+      // Cerrar menú al hacer clic en un enlace (Mejor UX)
+      links.forEach((link) => {
+        link.addEventListener("click", () => {
+          navLinks.classList.remove("active");
+          const icon = menuToggle.querySelector("i");
+          icon.classList.remove("fa-xmark");
+          icon.classList.add("fa-bars");
+        });
+      });
+    </script>
   </body>
 </html>
-

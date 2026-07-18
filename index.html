@@ -1,546 +1,1206 @@
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<!doctype html>
+<html lang="es" class="scroll-smooth">
 
-    <title>
-      Alan Diego Clavijo | Desarrollador Web e Ingeniero de Sistemas en Santa
-      Cruz
-    </title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alan Diego Clavijo | Ingeniero de Sistemas & Desarrollador Software</title>
+  <meta name="description" content="Portafolio profesional de Alan Diego Clavijo, Ingeniero de Sistemas especializado en soluciones de software inteligente, robótica automatizada e IoT." />
+  <meta name="keywords" content="Alan Clavijo, Alan Diego Clavijo, Ingeniero de Sistemas, Robótica, IoT, Desarrollo de Software, Portafolio, Santa Cruz, Bolivia" />
+    
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://alanclavijo.github.io/" />
+  <meta property="og:title" content="Alan Diego Clavijo | Portfolio" />
+  <meta property="og:description" content="Portafolio profesional de Alan Diego Clavijo, Ingeniero de Sistemas enfocado en soluciones de software inteligente y robótica." />
+  <meta property="og:image" content="https://alanclavijo.github.io/src/img/imagenportada2.png" />
 
-    <meta
-      name="description"
-      content="Portafolio de Alan Diego Clavijo Lagos. Desarrollador Web Full Stack y estudiante de Ingeniería de Sistemas en Santa Cruz, Bolivia. Experto en HTML, CSS, JavaScript, Python y C#."
-    />
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta property="twitter:url" content="https://alanclavijo.github.io/" />
+  <meta property="twitter:title" content="Alan Diego Clavijo | Portfolio" />
+  <meta property="twitter:description" content="Portafolio profesional de Alan Diego Clavijo, Ingeniero de Sistemas enfocado en soluciones de software inteligente y robótica." />
+  <meta property="twitter:image" content="https://alanclavijo.github.io/src/img/imagenportada2.png" />
 
-    <link rel="canonical" href="https://alanclavijo.github.io/" />
+  <!-- JSON-LD Datos Estructurados de Schema.org -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Alan Diego Clavijo Lagos",
+    "url": "https://alanclavijo.github.io/",
+    "image": "https://alanclavijo.github.io/src/img/imagenportada2.png",
+    "jobTitle": "Ingeniero de Sistemas",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Universidad Privada Domingo Savio"
+    },
+    "alumniOf": {
+      "@type": "EducationalOrganization",
+      "name": "Universidad Privada Domingo Savio"
+    },
+    "sameAs": [
+      "https://github.com/AlanClavijo",
+      "https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Santa Cruz de la Sierra",
+      "addressCountry": "Bolivia"
+    }
+  }
+  </script>
+  <!-- Google Search Console Verification -->
+  <meta name="google-site-verification" content="w6DH2YRJPsxIw7uYAJ5K62LgAJY-CCfW-c_z-ughoTc" />
 
-    <meta
-      name="google-site-verification"
-      content="w6DH2YRJPsxIw7uYAJ5K62LgAJY-CCfW-c_z-ughoTc"
-    />
-    <meta name="geo.region" content="BO-S" />
-    <meta name="geo.placename" content="Santa Cruz de la Sierra" />
-    <meta name="geo.position" content="-17.7833; -63.1821" />
-    <meta name="ICBM" content="-17.7833, -63.1821" />
-    <meta
-      name="keywords"
-      content="Alan Diego Clavijo, Desarrollador Web, Ingeniero de Sistemas, Santa Cruz, Bolivia, UPDS, Robótica, Programador, Freelancer, Frontend"
-    />
-    <meta name="author" content="Alan Diego Clavijo Lagos" />
-    <meta name="robots" content="index, follow" />
+  <!-- Google Analytics (GA4) -->
+  <!--
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
+  -->
 
-    <meta property="og:type" content="profile" />
-    <meta
-      property="og:title"
-      content="Portafolio de Alan D. Clavijo - Desarrollador Web"
-    />
-    <meta
-      property="og:description"
-      content="Ingeniero de Sistemas en formación y Auxiliar de Robótica. Mira mis proyectos y experiencia."
-    />
-    <meta
-      property="og:image"
-      content="https://alanclavijo.github.io/img/perfil.jpg"
-    />
-    <meta property="og:url" content="https://alanclavijo.github.io/" />
-    <meta property="og:locale" content="es_BO" />
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon.png" />
 
-    <link rel="stylesheet" href="css/style.css" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;800&family=Inter:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="icon" type="image/png" href="img/favicon.png" />
-
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Alan Diego Clavijo Lagos",
-        "jobTitle": "Estudiante de Ingeniería de Sistemas y Desarrollador Web",
-        "url": "https://alanclavijo.github.io",
-        "sameAs": [
-          "https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/",
-          "https://github.com/AlanClavijo"
-        ],
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Santa Cruz de la Sierra",
-          "addressCountry": "Bolivia"
-        },
-        "alumniOf": {
-          "@type": "CollegeOrUniversity",
-          "name": "Universidad Privada Domingo Savio"
-        }
-      }
-    </script>
-  </head>
-
-  <body>
-    <nav class="navbar">
-      <div class="nav-container">
-        <button class="menu-toggle" aria-label="Abrir menú">
-          <i class="fa-solid fa-bars"></i>
-        </button>
-
-        <div class="nav-links">
-          <a href="#sobre-mi" class="nav-link">Sobre mí</a>
-          <a href="#experiencia" class="nav-link">Experiencia</a>
-          <a href="#proyectos" class="nav-link">Proyectos</a>
-          <a href="#habilidades" class="nav-link">Habilidades</a>
-          <a href="#reconocimientos" class="nav-link">Logros</a>
-          <a href="#formacion-complementaria" class="nav-link">Formación</a>
-        </div>
+<body class="selection:bg-blue-600 selection:text-white transition-colors duration-300">
+  <nav
+    class="fixed top-0 left-0 w-full z-50 h-20 bg-white/80 backdrop-blur-md border-b border-slate-100 px-6 md:px-12 flex items-center justify-between">
+    <a href="#" class="block hover:opacity-80 transition-opacity">
+      <div class="text-xl font-display font-black tracking-tighter uppercase">
+        ALAN <span class="text-blue-600">CLAVIJO</span>
       </div>
+    </a>
+    <div class="flex items-center gap-6">
+      <button id="theme-toggle"
+        class="p-3 bg-slate-50 hover:bg-blue-600 hover:text-white rounded-2xl transition-all group"
+        aria-label="Alternar tema oscuro">
+        <i data-lucide="moon" class="w-5 h-5 text-slate-600 group-hover:text-white transition-colors dark:hidden"></i>
+        <i data-lucide="sun"
+          class="w-5 h-5 text-yellow-400 group-hover:text-white transition-colors hidden dark:block"></i>
+      </button>
+      <div class="lang-btn-container flex items-center gap-2 mr-2">
+        <button
+          class="lang-btn text-xs font-bold uppercase tracking-wider text-blue-600 transition-all px-2 py-1 rounded hover:bg-slate-100">ES</button>
+        <span class="text-slate-300 text-xs">/</span>
+        <button
+          class="lang-btn text-xs font-bold uppercase tracking-wider text-slate-400 transition-all px-2 py-1 rounded hover:bg-slate-100">EN</button>
+      </div>
+      <button id="open-sidebar"
+        class="p-3 bg-slate-50 hover:bg-blue-600 hover:text-white rounded-2xl transition-all group">
+        <i data-lucide="align-right" class="w-6 h-6 group-hover:rotate-12 transition-transform"></i>
+      </button>
+    </div>
+  </nav>
+
+  <div id="sidebar-overlay"
+    class="fixed inset-0 bg-slate-900/40 backdrop-blur-sm z-[90] hidden transition-opacity duration-500"></div>
+
+  <aside id="sidebar"
+    class="fixed top-0 right-0 h-full w-[85%] md:w-[400px] bg-slate-900/95 backdrop-blur-2xl z-[100] translate-x-full transition-transform duration-700 ease-in-out p-10 flex flex-col justify-center border-l border-white/10 shadow-[-20px_0_50px_rgba(0,0,0,0.2)]">
+    <button id="close-sidebar"
+      class="absolute top-6 right-6 p-4 text-white/30 hover:text-white transition-all hover:rotate-90 duration-300 z-[110]"
+      aria-label="Cerrar menú">
+      <i data-lucide="x" class="w-8 h-8"></i>
+    </button>
+
+    <nav class="flex flex-col gap-6">
+      <a href="#portfolio" class="sidebar-link" data-key="nav-portfolio">Portafolio</a>
+      <a href="#education" class="sidebar-link" data-key="nav-education">Educación</a>
+      <a href="#experience" class="sidebar-link" data-key="nav-experience">Experiencia</a>
+      <a href="#habilidades" class="sidebar-link" data-key="nav-skills">Habilidades</a>
+      <a href="#reconocimientos" class="sidebar-link" data-key="nav-achievements">Logros</a>
+      <a href="#contact" class="sidebar-link" data-key="nav-contact">Contacto</a>
     </nav>
 
-    <header class="perfil">
-      <div class="flip-card">
-        <div class="flip-card-inner">
-          <div class="flip-card-front">
-            <img src="img/perfil.jpg" alt="Alan Clavijo Formal" />
-          </div>
-          <div class="flip-card-back">
-            <img src="img/perfil.jpg" alt="Alan Clavijo Casual" />
-          </div>
-        </div>
-      </div>
-
-      <h1>
-        Alan D. Clavijo
-        <span class="cargo-h1"
-          >Desarrollador Web y Estudiante de Ingeniería de Sistemas</span
-        >
-      </h1>
-      <p class="ubicacion">📍 Santa Cruz, Bolivia</p>
-
-      <nav class="social-links">
-        <a
-          href="https://mail.google.com/mail/?view=cm&fs=1&to=alandiegocl@gmail.com"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-solid fa-envelope"></i> alandiegocl@gmail.com
-        </a>
-        <a
-          href="https://github.com/AlanClavijo"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-github"></i> GitHub
-        </a>
-        <a
-          href="https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <i class="fa-brands fa-linkedin"></i> LinkedIn
-        </a>
-      </nav>
-    </header>
-
-    <section id="sobre-mi">
-      <h2>Sobre mí</h2>
-      <p>
-        Hola, soy Alan Diego Clavijo Lagos, un Desarrollador Web Freelance y
-        estudiante de Ingeniería de Sistemas en la Universidad Privada Domingo
-        Savio (Santa Cruz, Bolivia). Me especializo en crear sitios web modernos
-        y soluciones de software, con experiencia en
-        <strong
-          >atención al cliente, desarrollo de aplicaciones móviles, robótica y
-          automatización</strong
-        >. Me caracterizo por mi actitud positiva, empatía, comunicación clara y
-        disposición para aprender. Apasionado por la tecnología y el trabajo en
-        equipo, busco aportar soluciones prácticas y efectivas.
+    <div class="mt-20 pt-10 border-t border-white/5 text-slate-500">
+      <p class="text-[9px] uppercase font-black tracking-[0.3em]">
+        Redes Sociales
       </p>
-    </section>
-
-    <section id="tecnologias">
-      <h2>Tecnologías</h2>
-      <div class="tags">
-        <span><i class="fa-brands fa-html5"></i> HTML</span>
-        <span><i class="fa-brands fa-css3-alt"></i> CSS</span>
-        <span><i class="fa-brands fa-js"></i> JavaScript</span>
-        <span><i class="fa-brands fa-python"></i> Python</span>
-        <span><i class="fa-solid fa-code"></i> C#</span>
-        <span><i class="fa-solid fa-microchip"></i> Arduino</span>
-        <span><i class="fa-brands fa-android"></i> Android Studio</span>
+      <div class="flex gap-4 mt-4">
+        <a href="https://github.com/AlanClavijo" class="hover:text-blue-500 transition-colors"><i
+            class="fa-brands fa-github"></i></a>
+        <a href="https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/"
+          class="hover:text-blue-500 transition-colors"><i class="fa-brands fa-linkedin"></i></a>
       </div>
-    </section>
+    </div>
+  </aside>
 
-    <section id="Formacion-academica">
-      <h2>FORMACIÓN ACADÉMICA</h2>
-      <div class="card-header">
-        <h3>Estudiante de Ingeniería de Sistemas (Licenciatura)</h3>
-        <span class="años">Febrero 2023 – Actualidad</span>
+  <header class="min-h-screen flex items-center pt-20 px-6 bg-white overflow-hidden">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+      <!-- Columna de Texto (Izquierda en desktop, Primero en móvil) -->
+      <div class="order-1 text-center md:text-left flex flex-col justify-center">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-xs mb-4 block"
+          data-key="hero-role">Ingeniero de Sistemas</span>
+        <h1 class="text-6xl md:text-8xl font-display font-black leading-none mb-8 gradient-text" data-key="hero-name">
+          ALAN <br />
+          CLAVIJO
+        </h1>
+        <p class="text-slate-500 max-w-md mx-auto md:ml-0 md:mr-auto text-lg leading-relaxed" data-key="hero-desc">
+          Desarrollador enfocado en soluciones de software inteligente y
+          robótica automatizada.
+        </p>
       </div>
-    </section>
 
-    <section id="experiencia">
-      <h2>Experiencia</h2>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>
-            Auxiliar de Robótica – Universidad Privada Domingo Savio (UPDS)
-          </h3>
-          <span class="años">Agosto 2023 – Actualidad</span>
+      <!-- Columna de Imagen (Derecha en desktop, Segundo en móvil) -->
+      <div class="order-2 flex justify-center">
+        <div class="relative group">
+          <div class="absolute -inset-4 bg-blue-600/10 rounded-full blur-2xl group-hover:bg-blue-600/20 transition-all">
+          </div>
+          <img src="src/img/imageedu.png" alt="Alan Clavijo"
+            class="relative w-80 h-80 object-cover rounded-full shadow-2xl grayscale hover:grayscale-0 transition-all duration-700" />
         </div>
-        <p>
-          Automatización de sistemas físicos y digitales. Desarrollo de
-          aplicaciones móviles y apoyo en actividades de robótica educativa.
-        </p>
       </div>
+    </div>
+  </header>
 
-      <div class="card">
-        <div class="card-header">
-          <h3>
-            Auxiliar de Materias - Programación – Universidad Privada Domingo
-            Savio (UPDS)
-          </h3>
-          <span class="años">Julio 2024 – Enero 2025</span>
+  <section id="portfolio" class="bg-[#f8fafc] py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-4">
+        <div>
+          <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-2 block" data-key="subtitle-portfolio">Selección de
+            trabajos</span>
+          <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 tracking-tighter" data-key="title-portfolio">
+            Proyectos
+          </h2>
         </div>
-        <p>
-          Asistencia a catedráticos y capacitaciones a estudiantes de primeros
-          semestres en materias de programación.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>Cajero - Auxiliar de sistemas – Crazy Chicken</h3>
-          <span class="años">Marzo 2021 – Enero 2023</span>
+        <div class="text-slate-400 font-display font-bold text-xl opacity-20 hidden md:block">
+          01 / Portfolio
         </div>
-        <p>
-          Implementación de sistemas con base de datos para la gestión de ventas
-          (ifood).
-        </p>
-        <p>
-          Gestión de caja y atención al cliente, incluyendo servicio en local y
-          delivery.
-        </p>
       </div>
 
-      <div class="card">
-        <div class="card-header">
-          <h3>Cajero - Atención al cliente – ChefWorks</h3>
-          <span class="años">Julio 2017 – Febrero 2020</span>
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card group overflow-hidden">
+          <div
+            class="h-64 overflow-hidden bg-slate-100 flex items-center justify-center p-8 transition-all group-hover:bg-blue-50">
+            <img src="https://alanclavijo.github.io/NexCore/assets/img/logos/nexcore-logo.png" alt="NexCore Solutions"
+              class="w-full h-full object-contain transition-transform duration-700 group-hover:scale-110" loading="lazy" />
+          </div>
+          <div class="p-8">
+            <span class="text-blue-600 font-bold text-[10px] uppercase tracking-widest">Web Development • BPO</span>
+            <h3 class="text-2xl font-display font-bold text-slate-900 mt-2 mb-3">
+              NexCore Solutions
+            </h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="proj-nexcore-desc">
+              Sitio web corporativo moderno para una empresa de BPO, enfocado
+              en la captación de clientes y diseño totalmente responsivo.
+            </p>
+            <a href="https://alanclavijo.github.io/NexCore/index.html" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-blue-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all" data-key="proj-view-details">
+              Ver Proyecto <i data-lucide="arrow-right" class="w-4 h-4"></i>
+            </a>
+          </div>
         </div>
-        <p>Gestión de caja y atención directa al cliente.</p>
-        <p>
-          Coordinación de entregas a domicilio (delivery) mediante plataformas
-          de redes sociales.
-        </p>
+
+        <div class="glass-card group overflow-hidden">
+          <div class="h-64 bg-slate-50 flex items-center justify-center transition-all group-hover:bg-slate-100">
+            <i data-lucide="terminal" class="w-24 h-24 text-slate-300 group-hover:text-blue-600 transition-colors"></i>
+          </div>
+          <div class="p-8">
+            <span class="text-blue-600 font-bold text-[10px] uppercase tracking-widest">Open Source • Python / C#</span>
+            <h3 class="text-2xl font-display font-bold text-slate-900 mt-2 mb-3">
+              Repositorio de Algoritmos
+            </h3>
+            <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="proj-algorithms-desc">
+              Colección de proyectos en Python y aplicaciones de consola en
+              C#, enfocados en lógica de programación y resolución de
+              problemas.
+            </p>
+            <a href="https://github.com/AlanClavijo" target="_blank" rel="noopener noreferrer"
+              class="inline-flex items-center gap-2 text-blue-600 font-bold text-xs uppercase tracking-widest hover:gap-4 transition-all" data-key="proj-view-profile">
+              Ver Perfil <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <section id="proyectos">
-      <h2>Proyectos Destacados</h2>
+  <section id="education" class="bg-white py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20 items-center">
+      <div class="w-full lg:w-5/12 relative group">
+        <div class="absolute -inset-4 bg-blue-600/5 rounded-[3rem] blur-2xl group-hover:bg-blue-600/10 transition-all">
+        </div>
+        <img src="src/img/imageedu.png" alt="Alan Educación"
+          class="relative w-full h-[550px] object-cover rounded-[3rem] shadow-2xl grayscale hover:grayscale-0 transition-all duration-1000" loading="lazy" />
 
-      <div class="proyectos-grid">
-        <article class="proyecto-card">
-          <div class="card-banner banner-nexcore">
-            <img
-              src="https://alanclavijo.github.io/NexCore/assets/img/logos/nexcore-logo.png"
-              alt="Logo NexCore Solutions"
-              class="card-logo"
-            />
+        <div
+          class="absolute -bottom-6 -right-6 bg-blue-600 text-white p-8 rounded-[2rem] shadow-xl shadow-blue-600/20 hidden md:block">
+          <p class="text-4xl font-display font-black tracking-tighter">
+            UPDS
+          </p>
+          <p class="text-[10px] uppercase font-bold tracking-[0.3em] opacity-80">
+            Systems Engineering
+          </p>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-7/12">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block" data-key="subtitle-education">Formación
+          Académica</span>
+        <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 mb-12 italic uppercase tracking-tighter" data-key="title-education">
+          Educación
+        </h2>
+
+        <div class="space-y-12">
+          <div class="flex gap-8 group">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-display font-bold group-hover:bg-blue-600 transition-colors shadow-lg">
+                01
+              </div>
+              <div class="w-px h-full bg-slate-100 group-last:hidden mt-4"></div>
+            </div>
+            <div class="pb-4">
+              <h3 class="text-2xl font-display font-bold text-slate-900 group-hover:text-blue-600 transition-colors" data-key="edu-sys-eng">
+                Ingeniería de Sistemas
+              </h3>
+              <p class="text-blue-600 font-bold text-sm mb-4" data-key="edu-sys-eng-details">
+                Universidad Privada Domingo Savio • 2023 - Actualidad
+              </p>
+              <p class="text-slate-500 text-sm leading-relaxed max-w-xl" data-key="edu-sys-eng-desc">
+                Enfoque en el desarrollo de software escalable, gestión de
+                infraestructuras tecnológicas y análisis de sistemas
+                complejos. Participación activa en proyectos de innovación
+                académica.
+              </p>
+            </div>
           </div>
 
-          <div class="card-content">
-            <h3>NexCore Solutions</h3>
-            <p>
-              Sitio web corporativo moderno para una empresa de BPO. Enfocado en
-              la presentación de servicios, captación de clientes y diseño
-              totalmente responsivo.
-            </p>
+          <div class="flex gap-8 group">
+            <div class="flex flex-col items-center">
+              <div
+                class="w-12 h-12 bg-slate-900 text-white rounded-2xl flex items-center justify-center font-display font-bold group-hover:bg-blue-600 transition-colors shadow-lg">
+                02
+              </div>
+              <div class="w-px h-full bg-slate-100 group-last:hidden mt-4"></div>
+            </div>
+            <div class="pb-4">
+              <h3 class="text-2xl font-display font-bold text-slate-900 group-hover:text-blue-600 transition-colors" data-key="edu-ai-cert">
+                Desarrollo con Inteligencia Artificial
+              </h3>
+              <p class="text-blue-600 font-bold text-sm mb-4" data-key="edu-ai-cert-details">
+                Certificación BIG School • 2024
+              </p>
+              <p class="text-slate-500 text-sm leading-relaxed max-w-xl" data-key="edu-ai-cert-desc">
+                Especialización en la integración de modelos de lenguaje y
+                automatización mediante herramientas de IA para optimizar
+                flujos de trabajo en desarrollo frontend y backend.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-            <div class="tech-tags">
-              <span class="tech-tag">HTML5</span>
-              <span class="tech-tag">CSS3</span>
-              <span class="tech-tag">JavaScript</span>
+  <section id="experience" class="bg-slate-50 py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse gap-20 items-center">
+      <div class="w-full lg:w-5/12 relative group">
+        <div class="absolute -inset-4 bg-blue-600/5 rounded-[3rem] blur-2xl group-hover:bg-blue-600/10 transition-all">
+        </div>
+
+        <div
+          class="relative bg-white p-12 rounded-[3rem] shadow-2xl border border-slate-100 flex flex-col items-center text-center">
+          <div
+            class="w-24 h-24 bg-blue-50 rounded-3xl flex items-center justify-center mb-8 group-hover:rotate-12 transition-transform duration-500">
+            <i data-lucide="briefcase" class="w-12 h-12 text-blue-600"></i>
+          </div>
+          <h4 class="text-3xl font-display font-black text-slate-900 mb-2" data-key="exp-years-title">
+            +4 Años
+          </h4>
+          <p class="text-slate-400 font-bold uppercase text-[10px] tracking-[0.3em]" data-key="exp-years-subtitle">
+            Trayectoria Laboral
+          </p>
+
+          <div class="mt-8 pt-8 border-t border-slate-50 w-full flex justify-center gap-6">
+            <div class="text-center">
+              <p class="text-blue-600 font-black text-xl">10+</p>
+              <p class="text-slate-400 text-[9px] uppercase font-bold" data-key="exp-stat-projects">
+                Proyectos
+              </p>
+            </div>
+            <div class="w-px h-10 bg-slate-100"></div>
+            <div class="text-center">
+              <p class="text-blue-600 font-black text-xl">5+</p>
+              <p class="text-slate-400 text-[9px] uppercase font-bold" data-key="exp-stat-companies">
+                Empresas
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-7/12">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-4 block" data-key="subtitle-experience">Professional
+          Journey</span>
+        <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 mb-12 italic uppercase tracking-tighter" data-key="title-experience">
+          Experiencia
+        </h2>
+
+        <div class="space-y-10">
+          <div class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-600 transition-colors">
+            <div
+              class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-slate-200 rounded-full group-hover:border-blue-600 group-hover:bg-blue-600 transition-all">
+            </div>
+            <span class="text-blue-600 font-bold text-xs" data-key="exp-robotics-date">AGOSTO 2023 - ACTUALIDAD</span>
+            <h3 class="text-2xl font-display font-bold text-slate-900 mt-1" data-key="exp-robotics-title">
+              Auxiliar de Robótica
+            </h3>
+            <p class="text-slate-400 font-bold text-[10px] uppercase tracking-widest mb-4">
+              UPDS Santa Cruz
+            </p>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-xl" data-key="exp-robotics-desc">
+              Desarrollo de prototipos automatizados y soporte técnico en
+              laboratorios de robótica. Implementación de aplicaciones móviles
+              para el control de hardware y apoyo didáctico en competencias
+              académicas.
+            </p>
+          </div>
+ 
+          <div class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-600 transition-colors">
+            <div
+              class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-slate-200 rounded-full group-hover:border-blue-600 group-hover:bg-blue-600 transition-all">
+            </div>
+            <span class="text-blue-600 font-bold text-xs" data-key="exp-programming-date">JULIO 2024 - ENERO 2025</span>
+            <h3 class="text-2xl font-display font-bold text-slate-900 mt-1" data-key="exp-programming-title">
+              Auxiliar de Programación
+            </h3>
+            <p class="text-slate-400 font-bold text-[10px] uppercase tracking-widest mb-4">
+              UPDS Santa Cruz
+            </p>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-xl" data-key="exp-programming-desc">
+              Capacitación técnica a estudiantes de primer año en lenguajes
+              como C# y algoritmos lógicos. Asistencia directa a catedráticos
+              en la evaluación de proyectos de software.
+            </p>
+          </div>
+ 
+          <div class="group relative pl-8 border-l-2 border-slate-200 hover:border-blue-600 transition-colors">
+            <div
+              class="absolute -left-[9px] top-0 w-4 h-4 bg-white border-2 border-slate-200 rounded-full group-hover:border-blue-600 group-hover:bg-blue-600 transition-all">
+            </div>
+            <span class="text-blue-600 font-bold text-xs" data-key="exp-systems-date">MARZO 2021 - ENERO 2023</span>
+            <h3 class="text-2xl font-display font-bold text-slate-900 mt-1" data-key="exp-systems-title">
+              Auxiliar de Sistemas
+            </h3>
+            <p class="text-slate-400 font-bold text-[10px] uppercase tracking-widest mb-4">
+              Crazy Chicken
+            </p>
+            <p class="text-slate-500 text-sm leading-relaxed max-w-xl" data-key="exp-systems-desc">
+              Implementación y mantenimiento de bases de datos para la gestión
+              de ventas integrando plataformas de delivery. Optimización de
+              flujos operativos mediante herramientas informáticas.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="reconocimientos" class="bg-white py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-2 block" data-key="subtitle-achievements">Achievements &
+          Awards</span>
+        <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 tracking-tighter italic uppercase" data-key="title-achievements">
+          Reconocimientos
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card p-10 group border-t-4 border-t-blue-600">
+          <div
+            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-all duration-500">
+            <i data-lucide="award" class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors"></i>
+          </div>
+          <span
+            class="text-blue-600 font-bold text-[10px] tracking-widest uppercase bg-blue-50 px-3 py-1 rounded-full">2025</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mt-6 mb-4" data-key="ach-fil-title">
+            XXVI Feria Internacional del Libro
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed" data-key="ach-fil-desc">
+            Reconocimiento oficial por la participación y aporte en la Feria
+            Internacional del Libro de Santa Cruz de la Sierra.
+          </p>
+        </div>
+ 
+        <div class="glass-card p-10 group border-t-4 border-t-slate-900">
+          <div
+            class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-slate-900 transition-all duration-500">
+            <i data-lucide="cpu" class="w-7 h-7 text-slate-900 group-hover:text-white transition-colors"></i>
+          </div>
+          <span
+            class="text-slate-500 font-bold text-[10px] tracking-widest uppercase bg-slate-50 px-3 py-1 rounded-full">2024</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mt-6 mb-4" data-key="ach-tech-title">
+            TECHHOMEBOT Robótica
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed" data-key="ach-tech-desc">
+            Participación destacada en la 2da Competencia Internacional de
+            Robótica, representando soluciones de automatización.
+          </p>
+        </div>
+ 
+        <div class="glass-card p-10 group border-t-4 border-t-blue-600">
+          <div
+            class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-all duration-500">
+            <i data-lucide="users" class="w-7 h-7 text-blue-600 group-hover:text-white transition-colors"></i>
+          </div>
+          <span
+            class="text-blue-600 font-bold text-[10px] tracking-widest uppercase bg-blue-50 px-3 py-1 rounded-full">2024</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mt-6 mb-4" data-key="ach-trainer-title">
+            Capacitador de Robótica
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed" data-key="ach-trainer-desc">
+            Certificación por impartir conocimientos técnicos y fomentar el
+            interés en la disciplina de robótica educativa.
+          </p>
+        </div>
+ 
+        <div class="glass-card p-10 group border-t-4 border-t-slate-900">
+          <div
+            class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-all duration-500">
+            <i data-lucide="microchip" class="w-7 h-7 text-slate-400 group-hover:text-white transition-colors"></i>
+          </div>
+          <span
+            class="text-slate-400 font-bold text-[10px] tracking-widest uppercase bg-slate-50 px-3 py-1 rounded-full">2024</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mt-6 mb-4" data-key="ach-olympiad-title">
+            Olimpiada Científica
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed" data-key="ach-olympiad-desc">
+            Apoyo técnico en la etapa departamental de la 12ª Olimpiada
+            Científica Estudiantil de Robótica.
+          </p>
+        </div>
+ 
+        <div class="glass-card p-10 group border-t-4 border-t-blue-600">
+          <div
+            class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center mb-8 group-hover:bg-blue-600 transition-all duration-500">
+            <i data-lucide="star" class="w-7 h-7 text-slate-400 group-hover:text-white transition-colors"></i>
+          </div>
+          <span
+            class="text-slate-400 font-bold text-[10px] tracking-widest uppercase bg-slate-50 px-3 py-1 rounded-full">2024</span>
+          <h3 class="text-xl font-display font-bold text-slate-900 mt-6 mb-4" data-key="ach-fil25-title">
+            25ª Feria del Libro
+          </h3>
+          <p class="text-slate-500 text-sm leading-relaxed" data-key="ach-fil25-desc">
+            Reconocimiento por la gestión y participación en el evento
+            cultural internacional.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="news" class="bg-slate-50 py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-6">
+        <div>
+          <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-2 block" data-key="subtitle-news">Media Presence</span>
+          <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 tracking-tighter italic uppercase" data-key="title-news">
+            En las Noticias
+          </h2>
+        </div>
+
+        <div class="flex gap-4">
+          <button id="prev-news"
+            class="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white">
+            <i data-lucide="arrow-left" class="w-6 h-6"></i>
+          </button>
+          <button id="next-news"
+            class="w-14 h-14 rounded-full border border-slate-200 flex items-center justify-center hover:bg-blue-600 hover:text-white transition-all shadow-sm bg-white">
+            <i data-lucide="arrow-right" class="w-6 h-6"></i>
+          </button>
+        </div>
+      </div>
+
+      <div class="relative overflow-hidden cursor-grab active:cursor-grabbing">
+        <div id="news-track" class="flex transition-transform duration-700 ease-in-out gap-8">
+          <div class="min-w-full md:min-w-[450px] glass-card p-10 bg-white">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600">
+                <i data-lucide="newspaper"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest" data-key="news-univ-press">
+                  Prensa Universitaria
+                </p>
+                <p class="text-slate-400 text-[10px]" data-key="news-date-june25">Junio 2025</p>
+              </div>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-6 leading-tight" data-key="news-fil-title">
+              "Equipo de Robótica de la UPDS cautiva a los más pequeños en la
+              Feria Internacional del Libro"
+            </h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed" data-key="news-fil-desc">
+              A través de la propuesta “Un mundo de diversión y aprendizaje
+              con dinosaurios”, destacamos en el Pabellón Infantil combinando
+              creatividad, tecnología y educación ante la comunidad cruceña.
+            </p>
+            <a href="https://www.upds.edu.bo/equipo-de-robotica-de-la-upds-cautiva-a-los-mas-pequenos-en-el-pabellon-infantil-de-la-feria-internacional-del-libro/"
+              target="_blank" rel="noopener noreferrer"
+              class="text-blue-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+              <span data-key="news-read-pub">Leer publicación</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="min-w-full md:min-w-[450px] glass-card p-10 bg-white">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest" data-key="news-fb-post">
+                  Facebook Post
+                </p>
+                <p class="text-slate-400 text-[10px]" data-key="news-date-nov25">Noviembre 2025</p>
+              </div>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-6 leading-tight" data-key="news-trainer-title">
+              Capacitación Estratégica en Robótica Educativa - Facultad de
+              Ingeniería UPDS
+            </h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed" data-key="news-trainer-desc">
+              En coordinación con la Fundación Sepa, lideramos una jornada
+              técnica dirigida a más de 100 estudiantes de distintas unidades
+              educativas, fomentando el interés por la ingeniería en las
+              nuevas generaciones.
+            </p>
+            <a href="https://www.facebook.com/UPDS.bo/posts/1268543188651665/" target="_blank" rel="noopener noreferrer"
+              class="text-blue-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+              <span data-key="news-view-fb">Ver en Facebook</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="min-w-full md:min-w-[450px] glass-card p-10 bg-white">
+            <div class="flex items-center gap-4 mb-6">
+              <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center">
+                <i class="fa-brands fa-facebook-f text-xl"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest" data-key="news-id-project">
+                  Proyecto I+D
+                </p>
+                <p class="text-slate-400 text-[10px]" data-key="news-date-sept25">Septiembre 2025</p>
+              </div>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-6 leading-tight" data-key="news-iot-title">
+              Innovación en Salud: Convergencia entre Ingeniería y Medicina en
+              la UPDS
+            </h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed" data-key="news-iot-desc">
+              Desarrollo de un sistema IoT con almacenamiento en la nube para
+              la digitalización de entornos médicos, ofreciendo monitoreo de
+              sensores y alertas en tiempo real para optimizar la atención
+              clínica.
+            </p>
+            <a href="https://www.facebook.com/tecnologiaupds1/posts/pfbid0aSxyMM2X9SP2uRgdpAgdzvaxrbJfrSBa7TbfCVLppxtTVMupExuV56R6oGcXheA9l"
+              target="_blank" rel="noopener noreferrer"
+              class="text-blue-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+              <span data-key="news-view-fb">Ver en Facebook</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="min-w-full md:min-w-[450px] glass-card p-10 bg-white">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest" data-key="news-ig-post">
+                  Instagram Post
+                </p>
+                <p class="text-slate-400 text-[10px]" data-key="news-date-may24">Mayo 2024</p>
+              </div>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-6 leading-tight" data-key="news-robots-title">
+              Fomentando la Innovación: Experiencia de Robótica para Colegios
+              en UPDS
+            </h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed" data-key="news-robots-desc">
+              Recibimos a los colegios Juana Azurduy y Buena Fe para explorar
+              el mundo de la robótica. Como parte del equipo técnico, guiamos
+              este día de aprendizaje e innovación tecnológica universitaria.
+            </p>
+            <a href="https://www.instagram.com/p/C69wG3tN7Nb/" target="_blank" rel="noopener noreferrer"
+              class="text-blue-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+              <span data-key="news-view-ig">Ver en Instagram</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="min-w-full md:min-w-[450px] glass-card p-10 bg-white">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest" data-key="news-ig-reel">
+                  Instagram Reel
+                </p>
+                <p class="text-slate-400 text-[10px]" data-key="news-date-nov24">Noviembre 2024</p>
+              </div>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-6 leading-tight" data-key="news-camiri-title">
+              Expansión Tecnológica: Capacitación de Robótica en la Provincia
+              Cordillera
+            </h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed" data-key="news-camiri-desc">
+              Lideramos una jornada intensiva de programación en Camiri para
+              estudiantes destacados de secundaria, impulsando el desarrollo
+              técnico y la descentralización de la ingeniería en Santa Cruz.
+            </p>
+            <a href="https://www.instagram.com/reel/C_tl6iYtIBM/" target="_blank" rel="noopener noreferrer"
+              class="text-blue-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+              <span data-key="news-view-reel">Ver Reel en Instagram</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+
+          <div class="min-w-full md:min-w-[450px] glass-card p-10 bg-white">
+            <div class="flex items-center gap-4 mb-6">
+              <div
+                class="w-12 h-12 bg-gradient-to-tr from-yellow-400 via-pink-500 to-purple-600 rounded-xl flex items-center justify-center text-white">
+                <i class="fa-brands fa-instagram text-xl"></i>
+              </div>
+              <div>
+                <p class="text-[10px] font-bold text-blue-600 uppercase tracking-widest" data-key="news-ig-reel-23">
+                  Instagram Reel
+                </p>
+                <p class="text-slate-400 text-[10px]" data-key="news-date-2023">2023</p>
+              </div>
+            </div>
+            <h3 class="text-xl font-display font-bold text-slate-900 mb-6 leading-tight" data-key="news-presenter-title">
+              Liderazgo y Tecnología: Presentación Oficial del Equipo de
+              Robótica UPDS
+            </h3>
+            <p class="text-slate-500 text-sm mb-8 leading-relaxed" data-key="news-presenter-desc">
+              Como presentador del equipo, lideré la exposición de nuestros
+              avances en automatización, destacando el talento técnico y la
+              innovación de la Facultad de Ingeniería ante la comunidad.
+            </p>
+            <a href="https://www.instagram.com/reel/C3-w5mpIPB_/" target="_blank" rel="noopener noreferrer"
+              class="text-blue-600 font-bold text-xs uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all">
+              <span data-key="news-view-reel">Ver Reel en Instagram</span>
+              <i data-lucide="external-link" class="w-4 h-4"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="habilidades" class="bg-white py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-2 block" data-key="subtitle-skills">Technical Stack</span>
+        <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 tracking-tighter italic uppercase" data-key="title-skills">
+          Habilidades
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div class="skill-card group">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-12 h-12 bg-orange-50 rounded-xl flex items-center justify-center text-orange-600 group-hover:bg-orange-600 group-hover:text-white transition-all">
+              <i class="fa-brands fa-html5 text-xl"></i>
+            </div>
+            <h3 class="font-bold text-slate-900">Frontend Dev</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-400">
+              <span>HTML / CSS / JS</span>
+              <span class="text-blue-600">95%</span>
+            </div>
+            <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 95%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card group">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-12 h-12 bg-blue-50 rounded-xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all">
+              <i class="fa-brands fa-python text-xl"></i>
+            </div>
+            <h3 class="font-bold text-slate-900">Python</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-400">
+              <span>Data & Logic</span>
+              <span class="text-blue-600">85%</span>
+            </div>
+            <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 85%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card group">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-12 h-12 bg-purple-50 rounded-xl flex items-center justify-center text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-all">
+              <i class="fa-solid fa-code text-xl"></i>
+            </div>
+            <h3 class="font-bold text-slate-900">C# / .NET</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-400">
+              <span>Desktop Apps</span>
+              <span class="text-blue-600">80%</span>
+            </div>
+            <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 80%"></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="skill-card group">
+          <div class="flex items-center gap-4 mb-6">
+            <div
+              class="w-12 h-12 bg-green-50 rounded-xl flex items-center justify-center text-green-600 group-hover:bg-green-600 group-hover:text-white transition-all">
+              <i class="fa-brands fa-android text-xl"></i>
+            </div>
+            <h3 class="font-bold text-slate-900">Mobile Apps</h3>
+          </div>
+          <div class="space-y-4">
+            <div class="flex justify-between text-[10px] font-bold uppercase tracking-widest text-slate-400">
+              <span>Android Studio</span>
+              <span class="text-blue-600">75%</span>
+            </div>
+            <div class="h-1.5 bg-slate-100 rounded-full overflow-hidden">
+              <div class="h-full bg-blue-600 rounded-full transition-all duration-1000" style="width: 75%"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 shadow-inner">
+          <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3" data-key="skills-soft-title">
+            <i data-lucide="brain" class="text-blue-600"></i> Habilidades
+            Blandas
+          </h3>
+          <div class="flex flex-wrap gap-3">
+            <span
+              class="px-5 py-2.5 bg-white border border-slate-200 rounded-2xl text-xs font-bold text-slate-500 hover:border-blue-600 hover:text-blue-600 transition-all cursor-default" data-key="skills-soft-1">Comunicación
+              Asertiva</span>
+            <span
+              class="px-5 py-2.5 bg-white border border-slate-200 rounded-2xl text-xs font-bold text-slate-500 hover:border-blue-600 hover:text-blue-600 transition-all cursor-default" data-key="skills-soft-2">Trabajo
+              en Equipo</span>
+            <span
+              class="px-5 py-2.5 bg-white border border-slate-200 rounded-2xl text-xs font-bold text-slate-500 hover:border-blue-600 hover:text-blue-600 transition-all cursor-default" data-key="skills-soft-3">Atención
+              al Cliente</span>
+          </div>
+        </div>
+
+        <div class="p-10 rounded-[2.5rem] bg-slate-50 border border-slate-100 shadow-inner">
+          <h3 class="text-xl font-bold text-slate-900 mb-6 flex items-center gap-3" data-key="skills-lang-title">
+            <i data-lucide="languages" class="text-blue-600"></i> Idiomas
+          </h3>
+          <div class="space-y-4">
+            <div class="flex justify-between items-center bg-white p-4 rounded-2xl border border-slate-100">
+              <span class="font-bold text-slate-700" data-key="skills-lang-es">Español</span>
+              <span
+                class="text-blue-600 font-bold text-[10px] uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-lg" data-key="skills-lang-es-level">Nativo</span>
+            </div>
+            <div class="flex justify-between items-center bg-white p-4 rounded-2xl border border-slate-100">
+              <span class="font-bold text-slate-700" data-key="skills-lang-en">Inglés</span>
+              <span
+                class="text-slate-400 font-bold text-[10px] uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-lg" data-key="skills-lang-en-level">Básico
+                (A2)</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="formacion-complementaria" class="bg-white py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="mb-16 text-left">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-2 block" data-key="subtitle-additional">Additional Growth</span>
+        <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 tracking-tighter italic uppercase" data-key="title-additional">
+          Formación Complementaria
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card p-10 group">
+          <div class="flex items-start gap-6">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+              <i class="fa-brands fa-linkedin-in text-2xl"></i>
+            </div>
+            <div class="flex-1">
+              <span
+                class="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full" data-key="add-cert1-badge">Certificación
+                • 2024</span>
+              <h3 class="text-xl font-display font-bold text-slate-900 mt-4 mb-2" data-key="add-cert1-title">
+                Qué es la IA Generativa
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="add-cert1-desc">
+                LinkedIn Learning. Formación técnica sobre los fundamentos y
+                la ética en el uso de modelos generativos.
+              </p>
+              <a href="#"
+                class="text-blue-600 font-bold text-[10px] uppercase tracking-widest flex items-center gap-2 hover:gap-4 transition-all" data-key="add-view-cred">Ver
+                Credencial
+                <i data-lucide="external-link" class="w-3 h-3"></i></a>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 group">
+          <div class="flex items-start gap-6">
+            <div
+              class="w-14 h-14 bg-slate-900 rounded-2xl flex items-center justify-center text-white group-hover:bg-blue-600 transition-all duration-500 shadow-sm">
+              <i data-lucide="microchip" class="w-7 h-7"></i>
+            </div>
+            <div class="flex-1">
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full" data-key="add-cert2-badge">Congreso
+                • 2023</span>
+              <h3 class="text-xl font-display font-bold text-slate-900 mt-4 mb-2" data-key="add-cert2-title">
+                Ingeniería Industrial y Sistemas
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="add-cert2-desc">
+                Participación en el Congreso Internacional de Innovación con
+                12 horas curriculares avaladas.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 group">
+          <div class="flex items-start gap-6">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+              <i data-lucide="code" class="w-7 h-7"></i>
+            </div>
+            <div class="flex-1">
+              <span
+                class="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full" data-key="add-cert3-badge">Conferencias
+                • 2023</span>
+              <h3 class="text-xl font-display font-bold text-slate-900 mt-4 mb-2" data-key="add-cert3-title">
+                Talento en Programación
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="add-cert3-desc">
+                Ciclo de conferencias sobre tendencias de software en la
+                Facultad de Ingeniería de la UPDS.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 group">
+          <div class="flex items-start gap-6">
+            <div
+              class="w-14 h-14 bg-slate-50 rounded-2xl flex items-center justify-center text-slate-900 group-hover:bg-slate-900 group-hover:text-white transition-all duration-500 shadow-sm">
+              <i data-lucide="globe" class="w-7 h-7"></i>
+            </div>
+            <div class="flex-1">
+              <span
+                class="text-[10px] font-bold text-slate-400 uppercase tracking-widest bg-slate-50 px-3 py-1 rounded-full" data-key="add-cert4-badge">Modelo
+                UN • 2019</span>
+              <h3 class="text-xl font-display font-bold text-slate-900 mt-4 mb-2" data-key="add-cert4-title">
+                MUNVEDRA
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="add-cert4-desc">
+                Participación destacada en debates internacionales y
+                resolución de conflictos diplomáticos.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 group">
+          <div class="flex items-start gap-6">
+            <div
+              class="w-14 h-14 bg-blue-50 rounded-2xl flex items-center justify-center text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-all duration-500 shadow-sm">
+              <i data-lucide="mic" class="w-7 h-7"></i>
+            </div>
+            <div class="flex-1">
+              <span
+                class="text-[10px] font-bold text-blue-600 uppercase tracking-widest bg-blue-50 px-3 py-1 rounded-full" data-key="add-cert5-badge">Liderazgo
+                • 2018</span>
+              <h3 class="text-xl font-display font-bold text-slate-900 mt-4 mb-2" data-key="add-cert5-title">
+                Oratoria y Liderazgo
+              </h3>
+              <p class="text-slate-500 text-sm leading-relaxed mb-6" data-key="add-cert5-desc">
+                Desarrollo de habilidades de comunicación asertiva y dirección
+                de equipos de alto rendimiento.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonials" class="bg-blue-50 py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-20">
+        <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px] mb-2 block" data-key="subtitle-references">Professional
+          Feedback</span>
+        <h2 class="text-5xl md:text-6xl font-display font-black text-slate-900 tracking-tighter italic uppercase" data-key="title-references">
+          Referencias Profesionales
+        </h2>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div class="glass-card p-10 bg-white relative overflow-hidden group">
+          <div class="absolute top-6 right-10 text-blue-600/10">
+            <i class="fa-solid fa-quote-right text-6xl group-hover:rotate-12 transition-transform duration-500"></i>
+          </div>
+
+          <p class="text-slate-600 italic leading-relaxed mb-10 relative z-10" data-key="ref-dec-text">
+            "Alan demuestra una capacidad analítica excepcional en la
+            resolución de problemas lógicos. Su proactividad como auxiliar ha
+            sido clave para el éxito de los proyectos de robótica en la
+            facultad."
+          </p>
+
+          <div class="flex items-center gap-4 border-t border-slate-50 pt-8">
+            <div class="w-14 h-14 rounded-2xl bg-blue-50 overflow-hidden flex-shrink-0">
+              <img src="https://ui-avatars.com/api/?name=Ingeniero+UPDS&background=2563eb&color=fff" alt="Ingeniero" loading="lazy" />
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-slate-900 text-sm" data-key="ref-dec-role">
+                Director de Carrera
+              </h4>
+              <p class="text-blue-600 text-[10px] font-bold uppercase tracking-widest mt-0.5" data-key="ref-dec-org">
+                Facultad de Ingeniería UPDS
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 bg-white relative overflow-hidden group">
+          <div class="absolute top-6 right-10 text-blue-600/10">
+            <i class="fa-solid fa-quote-right text-6xl group-hover:rotate-12 transition-transform duration-500"></i>
+          </div>
+
+          <p class="text-slate-600 italic leading-relaxed mb-10 relative z-10" data-key="ref-pm-text">
+            "Su atención al detalle en el desarrollo frontend y su rapidez
+            para aprender nuevas tecnologías de IA lo convierten en un
+            desarrollador con un potencial enorme para cualquier equipo
+            técnico."
+          </p>
+
+          <div class="flex items-center gap-4 border-t border-slate-50 pt-8">
+            <div class="w-14 h-14 rounded-2xl bg-slate-900 overflow-hidden flex-shrink-0">
+              <img src="https://ui-avatars.com/api/?name=Senior+Dev&background=0f172a&color=fff"
+                alt="Senior Developer" loading="lazy" />
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-slate-900 text-sm" data-key="ref-pm-role">
+                Project Manager
+              </h4>
+              <p class="text-blue-600 text-[10px] font-bold uppercase tracking-widest mt-0.5">
+                NexCore Solutions
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="glass-card p-10 bg-white relative overflow-hidden group">
+          <div class="absolute top-6 right-10 text-blue-600/10">
+            <i class="fa-solid fa-quote-right text-6xl group-hover:rotate-12 transition-transform duration-500"></i>
+          </div>
+
+          <p class="text-slate-600 italic leading-relaxed mb-10 relative z-10" data-key="ref-crazy-text">
+            "Responsable, puntual y con una gran habilidad para la gestión de
+            bases de datos. Alan no solo soluciona problemas técnicos, sino
+            que entiende la lógica del negocio detrás de ellos."
+          </p>
+
+          <div class="flex items-center gap-4 border-t border-slate-50 pt-8">
+            <div class="w-14 h-14 rounded-2xl bg-blue-50 overflow-hidden flex-shrink-0">
+              <img src="https://ui-avatars.com/api/?name=Gerente+Sistemas&background=2563eb&color=fff" alt="Gerente" loading="lazy" />
+            </div>
+            <div>
+              <h4 class="font-display font-bold text-slate-900 text-sm" data-key="ref-crazy-role">
+                Jefe de Sistemas
+              </h4>
+              <p class="text-blue-600 text-[10px] font-bold uppercase tracking-widest mt-0.5">
+                Crazy Chicken
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="bg-slate-50 py-32 px-6 reveal">
+    <div class="max-w-7xl mx-auto flex flex-col lg:flex-row gap-20">
+      <div class="w-full lg:w-5/12">
+        <div class="flex items-center gap-2 mb-4">
+          <span class="w-3 h-3 bg-blue-600"></span>
+          <span class="text-blue-600 font-bold tracking-[0.4em] uppercase text-[10px]" data-key="subtitle-contact">Contacto</span>
+        </div>
+        <h2
+          class="text-5xl md:text-6xl font-display font-black text-slate-900 mt-2 mb-12 italic uppercase tracking-tighter" data-key="title-contact-prompt">
+          ¿Trabajamos juntos?
+        </h2>
+        <div class="space-y-8">
+          <div>
+            <h4 class="font-display font-bold text-slate-900 uppercase text-xs tracking-[0.2em] mb-3" data-key="contact-info-title">
+              Información
+            </h4>
+            <p class="text-slate-500 text-sm">
+              Santa Cruz de la Sierra, Bolivia
+            </p>
+            <p class="text-slate-500 text-sm">
+              Email:
+              <a href="mailto:alandiegocl@gmail.com" class="text-blue-600 hover:underline">alandiegocl@gmail.com</a>
+            </p>
+          </div>
+          <div class="flex gap-6 pt-4">
+            <a href="https://github.com/AlanClavijo" target="_blank" rel="noopener noreferrer"
+              class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                class="fa-brands fa-github text-xl"></i></a>
+            <a href="https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/" target="_blank" rel="noopener noreferrer"
+              class="text-slate-400 hover:text-blue-600 transition-colors"><i
+                class="fa-brands fa-linkedin text-xl"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full lg:w-7/12">
+        <div class="glass-card p-8 md:p-12 shadow-xl">
+          <form id="contact-form" class="space-y-10">
+            <div class="hidden">
+              <input type="text" name="hp_field" id="hp_field" />
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+              <input type="text" id="name" name="name" placeholder="Tu nombre" required class="contact-input-v2" data-key="contact-name-placeholder" />
+              <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required
+                class="contact-input-v2" data-key="contact-email-placeholder" />
+            </div>
+            <input type="text" id="phone" name="phone" placeholder="Número de teléfono" class="contact-input-v2" data-key="contact-phone-placeholder" />
+            <textarea id="message" name="message" placeholder="¿En qué puedo ayudarte?" rows="3" required
+              class="contact-input-v2 resize-none" data-key="contact-message-placeholder"></textarea>
+
+            <div class="pt-6">
+              <div
+                class="flex flex-col md:flex-row md:items-end gap-6 p-8 bg-white border border-slate-200 rounded-[2rem] shadow-sm">
+                <div class="flex-1">
+                  <label
+                    class="text-[10px] font-bold text-slate-400 uppercase tracking-widest mb-3 block" data-key="contact-captcha-label">Seguridad</label>
+                  <div class="flex items-center gap-4">
+                    <div id="captcha-display" class="captcha-box"></div>
+                    <button type="button" id="refresh-captcha"
+                      class="p-2 text-slate-400 hover:text-blue-600 transition-all"
+                      aria-label="Generar nuevo código de seguridad">
+                      <i data-lucide="rotate-cw" class="w-5 h-5"></i>
+                    </button>
+                  </div>
+                </div>
+                <div class="flex-1">
+                  <input type="text" id="captcha-input" placeholder="Ingresa el código" required
+                    class="contact-input-v2 !py-3" data-key="contact-captcha-placeholder" />
+                </div>
+              </div>
             </div>
 
-            <a
-              href="https://alanclavijo.github.io/NexCore/index.html"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-proyecto"
-            >
-              <i class="fa-solid fa-arrow-up-right-from-square"></i> Ver
-              Proyecto
-            </a>
-          </div>
-        </article>
+            <button type="submit"
+              class="w-full bg-blue-600 text-white font-black py-6 rounded-2xl hover:bg-slate-900 transition-all shadow-xl shadow-blue-600/20 uppercase tracking-widest text-sm"
+              data-key="btn-send">
+              Enviar mensaje
+            </button>
+            <p id="form-status" class="hidden text-center text-xs font-bold mt-4 tracking-widest uppercase"></p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
 
-        <article class="proyecto-card">
-          <div class="card-banner con-icono" style="background: #24292e">
-            <i class="fa-brands fa-github"></i>
+  <footer class="bg-[#0f172a] py-16 px-6 border-t border-white/5">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-10 mb-12">
+        <div class="text-center md:text-left">
+          <div class="text-2xl font-display font-black text-white tracking-tighter uppercase mb-4">
+            ALAN <span class="text-blue-500 italic">CLAVIJO</span>
           </div>
-
-          <div class="card-content">
-            <h3>Más Proyectos en GitHub</h3>
-            <p>
-              Explora mi código fuente, ejercicios de algoritmos en Python,
-              aplicaciones de consola en C# y proyectos de robótica.
+          <div
+            class="flex flex-wrap justify-center md:justify-start items-center gap-6 text-slate-400 text-xs font-bold uppercase tracking-widest">
+            <p class="flex items-center gap-2">
+              <i data-lucide="map-pin" class="w-3 h-3 text-blue-500"></i>
+              Santa Cruz, Bolivia
             </p>
-
-            <div class="tech-tags">
-              <span class="tech-tag">Python</span>
-              <span class="tech-tag">C#</span>
-              <span class="tech-tag">Arduino</span>
-            </div>
-
-            <a
-              href="https://github.com/AlanClavijo"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="btn-proyecto"
-              style="background-color: #333"
-            >
-              <i class="fa-brands fa-github"></i> Ver Perfil
-            </a>
+            <span class="hidden md:inline opacity-20">|</span>
+            <p class="flex items-center gap-2">
+              <i data-lucide="mail" class="w-3 h-3 text-blue-500"></i>
+              alandiegocl@gmail.com
+            </p>
           </div>
-        </article>
+        </div>
+
+        <div class="flex items-center gap-6">
+          <a href="https://github.com/AlanClavijo" target="_blank" rel="noopener noreferrer"
+            class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-500 group"
+            aria-label="GitHub">
+            <i class="fa-brands fa-github text-xl group-hover:scale-110"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/" target="_blank" rel="noopener noreferrer"
+            class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-500 group"
+            aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin text-xl group-hover:scale-110"></i>
+          </a>
+          <a href="https://www.instagram.com/alan_diego_clavijo.l/" target="_blank" rel="noopener noreferrer"
+            class="w-12 h-12 rounded-xl bg-white/5 flex items-center justify-center text-slate-400 hover:bg-blue-600 hover:text-white transition-all duration-500 group"
+            aria-label="Instagram">
+            <i class="fa-brands fa-instagram text-xl group-hover:scale-110"></i>
+          </a>
+        </div>
       </div>
-    </section>
 
-    <section id="habilidades">
-      <h2>HABILIDADES</h2>
+      <div class="w-full h-px bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8"></div>
 
-      <div class="card">
-        <h3>Habilidades Técnicas</h3>
-        <p>
-          Programación | Ofimática | Desarrollo de aplicaciones móviles |
-          Automatización de sistemas | Herramientas informáticas | IA generativa
+      <div class="flex flex-col md:flex-row justify-between items-center gap-4 text-center">
+        <p class="text-slate-500 text-[10px] tracking-[0.4em] uppercase font-bold">
+          Copyright © 2026 | Desarrollado por
+          <span class="text-blue-500">Alan Clavijo</span>
         </p>
-      </div>
-
-      <div class="card">
-        <h3>Habilidades Personales</h3>
-        <p>Atención al cliente | Comunicación | Trabajo en equipo | Empatía</p>
-      </div>
-
-      <div class="card">
-        <h3>Idiomas</h3>
-        <p>Español (Avanzado) | Inglés (Básico)</p>
-      </div>
-    </section>
-
-    <section id="reconocimientos">
-      <h2>RECONOCIMIENTOS</h2>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>Reconocimiento - 25ª Feria Internacional del Libro</h3>
-          <span class="años">2024</span>
-        </div>
-        <p>
-          Reconocimiento por la participación activa en la 25ª Feria
-          Internacional del Libro de Santa Cruz de la Sierra.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>Reconocimiento - XXVI Feria Internacional del Libro</h3>
-          <span class="años">2025</span>
-        </div>
-        <p>
-          Reconocimiento por la participación en la XXVI Feria Internacional del
-          Libro de Santa Cruz de la Sierra.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>TECHHOMEBOT - 2da Competencia Internacional de Robótica</h3>
-          <span class="años">2024</span>
-        </div>
-        <p>
-          Participación destacada en la 2da Competencia Internacional de
-          Robótica TECHHOMEBOT.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>Apoyo en Olimpiada Científica Plurinacional (Robótica)</h3>
-          <span class="años">2024</span>
-        </div>
-        <p>
-          Reconocimiento por el valioso apoyo en la etapa departamental de la
-          12ª Olimpiada Científica Estudiantil.
-        </p>
-      </div>
-
-      <div class="card">
-        <div class="card-header">
-          <h3>Capacitador Práctico de Robótica Educativa</h3>
-          <span class="años">2024</span>
-        </div>
-        <p>
-          Reconocimiento por impartir conocimientos y fomentar el interés en la
-          disciplina de robótica.
-        </p>
-      </div>
-    </section>
-
-    <section id="formacion-complementaria">
-      <h2>FORMACIÓN COMPLEMENTARIA</h2>
-
-      <div class="grid-container">
-        <div class="card">
-          <div class="card-header">
-            <h3>Curso de Iniciación al Desarrollo con IA</h3>
-            <span class="años">2024</span>
-          </div>
-          <p>
-            Impartido por BIG School. Fundamentos de IA y aplicación en
-            proyectos reales.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Inteligencia Artificial y Productividad</h3>
-            <span class="años">2024</span>
-          </div>
-          <p>Curso certificado por Google y Santander Open Academy.</p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Qué es la IA generativa</h3>
-            <span class="años">2024</span>
-          </div>
-          <p>
-            Certificación de LinkedIn Learning sobre fundamentos éticos de la IA
-            Generativa.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Congreso de Ingeniería Industrial y Sistemas</h3>
-            <span class="años">2023</span>
-          </div>
-          <p>
-            Participación en congreso internacional (12 horas curriculares).
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Desarrolla tu talento en Programación</h3>
-            <span class="años">2023</span>
-          </div>
-          <p>
-            Ciclo de conferencias organizado por la Facultad de Ingeniería de la
-            UPDS.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Operador de Computadoras con Office</h3>
-            <span class="años">2020</span>
-          </div>
-          <p>
-            Certificación técnica en ofimática y herramientas digitales
-            (Softibol).
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Modelo de Naciones Unidas (MUNVEDRA)</h3>
-            <span class="años">2019</span>
-          </div>
-          <p>
-            Participación destacada en el 4to Modelo Interno de las Naciones
-            Unidas.
-          </p>
-        </div>
-
-        <div class="card">
-          <div class="card-header">
-            <h3>Taller de Oratoria y Liderazgo</h3>
-            <span class="años">2018</span>
-          </div>
-          <p>
-            Capacitación en habilidades blandas, comunicación efectiva y
-            liderazgo.
-          </p>
+        <div class="flex gap-6 text-[9px] uppercase font-black tracking-widest text-slate-600">
+          <a href="#portfolio" class="hover:text-blue-500 transition-colors">Portafolio</a>
+          <a href="#experience" class="hover:text-blue-600 transition-colors">Experiencia</a>
+          <a href="#contact" class="hover:text-blue-500 transition-colors">Contacto</a>
         </div>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <a href="#" class="btn-subir" aria-label="Volver arriba">
-      <i class="fa-solid fa-arrow-up"></i>
-    </a>
+  <script src="js/script.js"></script>
+</body>
 
-    <footer>
-      <div class="footer-content">
-        <div class="footer-section">
-          <h3>Alan D. Clavijo</h3>
-          <p>
-            Desarrollador Web e Ingeniero de Sistemas en formación. Creando
-            soluciones digitales eficientes.
-          </p>
-        </div>
-
-        <div class="footer-section">
-          <h3>Navegación</h3>
-          <ul class="footer-links">
-            <li><a href="#sobre-mi">Sobre mí</a></li>
-            <li><a href="#experiencia">Experiencia</a></li>
-            <li><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#habilidades">Habilidades</a></li>
-          </ul>
-        </div>
-
-        <div class="footer-section">
-          <h3>Contacto</h3>
-          <div class="social-icons">
-            <a
-              href="https://www.linkedin.com/in/alan-diego-clavijo-lagos-25b806327/"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="LinkedIn"
-            >
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-            <a
-              href="https://github.com/AlanClavijo"
-              target="_blank"
-              rel="noopener noreferrer"
-              aria-label="GitHub"
-            >
-              <i class="fa-brands fa-github"></i>
-            </a>
-            <a
-              href="mailto:alandiegocl@gmail.com"
-              aria-label="Email"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <i class="fa-solid fa-envelope"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="footer-bottom">
-        <p>
-          &copy; 2025 Alan Diego Clavijo Lagos. Todos los derechos reservados.
-        </p>
-      </div>
-    </footer>
-
-    <script src="js/script.js"></script>
-  </body>
 </html>

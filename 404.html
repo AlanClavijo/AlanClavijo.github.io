@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>404 - Página No Encontrada | Alan Clavijo</title>
+  <!-- Tailwind CSS Play CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ['Space Grotesk', 'sans-serif'],
+            sans: ['Inter', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    :root {
+      --bg-main: #0b0f19;
+      --text-main: #f3f4f6;
+    }
+    body {
+      background-color: var(--bg-main);
+      color: var(--text-main);
+      font-family: 'Inter', sans-serif;
+    }
+    .glass-card {
+      background: rgba(255, 255, 255, 0.03);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      border-radius: 2.5rem;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-6 overflow-hidden relative">
+  <!-- Decorative background gradients -->
+  <div class="absolute top-1/4 left-1/4 w-96 h-96 bg-blue-600/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+  <div class="absolute bottom-1/4 right-1/4 w-96 h-96 bg-cyan-600/10 rounded-full blur-[120px] -z-10 pointer-events-none"></div>
+
+  <div class="max-w-xl w-full text-center glass-card p-12 md:p-16 shadow-2xl relative">
+    <div class="flex justify-center mb-8">
+      <div class="w-20 h-20 bg-blue-600/10 rounded-2xl flex items-center justify-center text-blue-500 shadow-inner">
+        <i data-lucide="compass" class="w-10 h-10 animate-spin" style="animation-duration: 10s;"></i>
+      </div>
+    </div>
+
+    <h1 class="text-8xl font-display font-black text-blue-500 italic tracking-tighter mb-4">404</h1>
+    <h2 class="text-2xl font-display font-bold text-slate-100 mb-6 uppercase tracking-wider">Página No Encontrada</h2>
+    
+    <p class="text-slate-400 text-sm leading-relaxed mb-10">
+      Parece que has tomado un camino equivocado. La página que estás buscando no existe o ha sido movida temporalmente.
+      <br>
+      <span class="text-xs text-slate-500 mt-2 block">It looks like you've taken a wrong path. The page you are looking for does not exist.</span>
+    </p>
+
+    <a href="https://alanclavijo.github.io/" 
+       class="inline-flex items-center gap-3 bg-blue-600 text-white font-black px-8 py-4 rounded-2xl hover:bg-white hover:text-slate-900 transition-all duration-500 shadow-xl shadow-blue-600/10 uppercase tracking-widest text-xs">
+      <i data-lucide="arrow-left" class="w-4 h-4"></i>
+      Volver al Portafolio
+    </a>
+  </div>
+
+  <script>
+    // Initialize icons
+    lucide.createIcons();
+  </script>
+</body>
+</html>

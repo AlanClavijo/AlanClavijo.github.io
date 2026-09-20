@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es" class="dark">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AutoClicker Desktop Utility | Alan Diego Clavijo</title>
+  <meta name="description" content="Descarga gratuita de AutoClicker Utility para Windows. Herramienta ligera de automatización de clics para accesibilidad, pruebas de software y tareas repetitivas." />
+  <meta name="keywords" content="autoclicker, autoclicker windows, automatizacion de clics, autoclicker gratis, alan clavijo autoclicker, software utility" />
+
+  <!-- Favicons -->
+  <link rel="icon" type="image/png" sizes="32x32" href="src/img/favicon.png" />
+  <link rel="icon" type="image/png" sizes="16x16" href="src/img/favicon.png" />
+  <link rel="apple-touch-icon" sizes="180x180" href="src/img/favicon.png" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      darkMode: 'class'
+    }
+  </script>
+  <script src="https://unpkg.com/lucide@0.400.0/dist/umd/lucide.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;800&family=Inter:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body class="bg-[#0b0d12] text-slate-100 font-sans antialiased selection:bg-blue-600 selection:text-white min-h-screen flex flex-col justify-between">
+
+  <!-- Header Nav -->
+  <nav class="border-b border-white/10 bg-[#0b0d12]/80 backdrop-blur-md sticky top-0 z-50 py-4 px-6">
+    <div class="max-w-6xl mx-auto flex items-center justify-between">
+      <a href="index.html" class="flex items-center gap-3 group">
+        <div class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-display font-black text-white text-lg group-hover:scale-105 transition-transform">
+          AC
+        </div>
+        <span class="font-display font-bold tracking-tight text-white group-hover:text-blue-400 transition-colors">
+          Alan Clavijo <span class="text-blue-500 text-xs uppercase tracking-widest block">AutoClicker Studio</span>
+        </span>
+      </a>
+      <div class="flex items-center gap-4">
+        <a href="terms.html" class="text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors hidden sm:inline-block">
+          Términos & Legales
+        </a>
+        <a href="index.html" class="inline-flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-slate-400 hover:text-white transition-colors bg-white/5 hover:bg-white/10 px-4 py-2.5 rounded-xl border border-white/10">
+          <i data-lucide="arrow-left" class="w-4 h-4"></i> Volver al Portafolio
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero & Download Section -->
+  <main class="max-w-5xl mx-auto px-6 py-16 flex-grow space-y-20">
+
+    <!-- Hero Header -->
+    <div class="text-center space-y-6 max-w-3xl mx-auto">
+      <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-blue-600/10 border border-blue-500/20 text-blue-400 text-xs font-bold uppercase tracking-widest">
+        <i data-lucide="mouse-pointer-click" class="w-4 h-4"></i> Desktop Utility v1.0 • Windows 10/11
+      </div>
+      <h1 class="text-4xl md:text-6xl font-display font-black tracking-tight text-white leading-tight">
+        AutoClicker <span class="text-blue-500 italic">Utility</span>
+      </h1>
+      <p class="text-slate-400 text-base md:text-lg leading-relaxed">
+        Herramienta de automatización de clics ligera, ultra-rápida y segura para Windows. Diseñada para pruebas de software (QA), accesibilidad y tareas repetitivas de escritorio.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+        <a href="https://github.com/AlanClavijo" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto inline-flex items-center justify-center gap-3 bg-blue-600 hover:bg-blue-500 text-white font-black px-8 py-4 rounded-2xl shadow-xl shadow-blue-600/20 transition-all uppercase tracking-widest text-xs group">
+          <i data-lucide="download" class="w-5 h-5 group-hover:translate-y-0.5 transition-transform"></i> Descargar AutoClicker (GitHub Releases)
+        </a>
+        <a href="terms.html" class="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-white/5 hover:bg-white/10 text-slate-300 font-bold px-6 py-4 rounded-2xl border border-white/10 transition-all uppercase tracking-widest text-xs">
+          <i data-lucide="shield-check" class="w-4 h-4 text-blue-400"></i> Ver Licencia & Términos
+        </a>
+      </div>
+
+      <!-- Trust Badges -->
+      <div class="flex flex-wrap justify-center items-center gap-6 text-slate-500 text-xs font-semibold pt-6">
+        <span class="flex items-center gap-2">
+          <i data-lucide="check-circle-2" class="w-4 h-4 text-green-400"></i> Software Verificado
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="shield" class="w-4 h-4 text-blue-400"></i> Licencia Abierta MIT
+        </span>
+        <span class="flex items-center gap-2">
+          <i data-lucide="zap" class="w-4 h-4 text-yellow-400"></i> Sin Instalación Complicada
+        </span>
+      </div>
+    </div>
+
+    <!-- Interface Preview Mockup -->
+    <div class="bg-gradient-to-b from-slate-900 to-[#0b0d12] p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl relative overflow-hidden">
+      <div class="max-w-2xl mx-auto bg-[#131722] border border-white/10 rounded-2xl p-6 shadow-2xl space-y-6">
+        <div class="flex items-center justify-between border-b border-white/10 pb-4">
+          <div class="flex items-center gap-3">
+            <div class="w-8 h-8 rounded-lg bg-blue-600 flex items-center justify-center">
+              <i data-lucide="mouse-pointer" class="w-4 h-4 text-white"></i>
+            </div>
+            <span class="font-display font-bold text-white text-sm">AutoClicker Pro - Control Panel</span>
+          </div>
+          <span class="text-[10px] bg-green-500/10 text-green-400 border border-green-500/20 px-2.5 py-1 rounded-full font-bold">READY</span>
+        </div>
+
+        <div class="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div class="bg-white/5 p-3 rounded-xl border border-white/5">
+            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block">Horas</span>
+            <span class="text-xl font-mono font-bold text-white">0</span>
+          </div>
+          <div class="bg-white/5 p-3 rounded-xl border border-white/5">
+            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block">Minutos</span>
+            <span class="text-xl font-mono font-bold text-white">0</span>
+          </div>
+          <div class="bg-white/5 p-3 rounded-xl border border-white/5">
+            <span class="text-[10px] text-slate-400 font-bold uppercase tracking-widest block">Segundos</span>
+            <span class="text-xl font-mono font-bold text-white">0</span>
+          </div>
+          <div class="bg-white/5 p-3 rounded-xl border border-blue-500/30 bg-blue-500/5">
+            <span class="text-[10px] text-blue-400 font-bold uppercase tracking-widest block">Milisegundos</span>
+            <span class="text-xl font-mono font-bold text-blue-400">100</span>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row justify-between items-center gap-4 bg-white/5 p-4 rounded-xl border border-white/5 text-xs text-slate-300">
+          <div>
+            <span class="text-slate-400 block font-bold">Atajo de Iniciar / Detener:</span>
+            <span class="text-white font-mono font-bold">Tecla Hotkey [F6]</span>
+          </div>
+          <div>
+            <span class="text-slate-400 block font-bold">Tipo de Botón:</span>
+            <span class="text-white font-mono font-bold">Clic Izquierdo • Simple</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Features Grid -->
+    <div class="space-y-8">
+      <div class="text-center space-y-2">
+        <h2 class="text-3xl font-display font-black text-white">Características Principales</h2>
+        <p class="text-slate-400 text-sm">Diseñado con enfoque en rendimiento, bajo consumo de CPU y simplicidad.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center">
+            <i data-lucide="timer" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg">Intervalos Ultra-Precisos</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Configura la velocidad desde milisegundos hasta horas con precisión milimétrica sin congelar el sistema.</p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center">
+            <i data-lucide="keyboard" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg">Teclas de Atajo (Hotkeys)</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Inicia y detén la secuencia de clics al instante presionando teclas globales sin necesidad de minimizar tus programas.</p>
+        </div>
+
+        <div class="bg-white/5 border border-white/10 p-6 rounded-2xl space-y-3">
+          <div class="w-12 h-12 rounded-xl bg-blue-600/10 text-blue-400 flex items-center justify-center">
+            <i data-lucide="settings-2" class="w-6 h-6"></i>
+          </div>
+          <h3 class="font-display font-bold text-white text-lg">Personalización Completa</h3>
+          <p class="text-slate-400 text-xs leading-relaxed">Selecciona el botón del ratón (izquierdo, derecho o central), tipo de clic (simple/doble) y cantidad límite de repeticiones.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Legal Disclaimer Banner -->
+    <div class="p-6 rounded-2xl bg-blue-600/10 border border-blue-500/20 text-xs text-slate-300 space-y-3">
+      <div class="flex items-center gap-2 text-blue-400 font-bold uppercase tracking-widest">
+        <i data-lucide="scale" class="w-4 h-4"></i> Información Legal & Cumplimiento
+      </div>
+      <p class="leading-relaxed">
+        AutoClicker es una herramienta de automatización desarrollada con fines de accesibilidad, pruebas de software (QA) y productividad. El uso de esta aplicación en plataformas o juegos de terceros está sujeto a los Términos de Servicio de dichos servicios. Para más detalles, consulta nuestros <a href="terms.html" class="text-blue-400 font-bold hover:underline">Términos de Servicio & Aviso Legal</a>.
+      </p>
+    </div>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="border-t border-white/10 bg-[#090b0e] py-8 px-6 text-center text-xs text-slate-500">
+    <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+      <p>© 2026 Alan Diego Clavijo Lagos. Todos los derechos reservados.</p>
+      <div class="flex items-center gap-6">
+        <a href="index.html" class="hover:text-slate-300 transition-colors">Portafolio</a>
+        <a href="autoclicker.html" class="text-blue-400 font-bold hover:underline">AutoClicker Utility</a>
+        <a href="terms.html" class="hover:text-slate-300 transition-colors">Aviso Legal & Términos</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
+</body>
+
+</html>
